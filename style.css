@@ -1,0 +1,296 @@
+/* Paramètres généraux */
+
+@font-face {
+    font-family: "font-reg";
+    src: url(Portfolio/assets/fonts/PlayfairDisplay-Regular.ttf);
+}
+
+@font-face {
+    font-family: font-bold;
+    src: url(Portfolio/assets/fonts/PlayfairDisplay-ExtraBold.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*::selection{
+    background: black;
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "font-reg", serif;
+    background: black;
+    color: white;
+    transition: 0.7s ease-in-out;
+}
+
+h2{
+    font-size: calc(3rem + 5vw);
+    text-align: center;
+    color: rgb(217, 217, 217);
+    font-family: "font-bold", serif;
+    letter-spacing: 3px;
+}
+
+.title{
+    font-size: calc(1.5rem + 5vw);
+    letter-spacing: 0;
+}
+
+span{
+    display: inline-block;
+}
+
+a, a:visited{
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: 0.1s linear;
+    font-size: calc(0.8rem + 0.8vw);
+}
+
+a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    background: white;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    transform-origin: left;
+}
+
+a:hover{
+    transform: scale(1.04);
+    color: rgb(210, 210, 210);
+}
+
+a:hover::after{
+    animation: animlink 1.4s ease-in-out;
+}
+
+@keyframes animlink{
+    50%{
+        transform: scale(0.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.img{
+    height: 395px;
+    width: 100vw;
+    max-width: 395px;
+    margin: 0 auto;
+    filter: grayscale(100%);
+    transition: 1.6s;
+}
+
+.img:hover{
+    filter: grayscale(10%);
+}
+
+.line{
+    height: 2px;
+    width: 70%;
+    margin: 0 auto;
+    background: white;
+    transition: 1s cubic-bezier(0.77, 0, 0.18, 1);
+    transform-origin: left;
+    transition-delay: 0.65s;
+}
+
+
+/* Paramètres par ordre d'application */
+header{
+    height: 100vh;
+    position: relative;
+    margin: 4vw 6vw 0;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: calc(2rem + 7vw);
+    margin-top: 120px;
+    font-family: "font-bold", serif;
+    letter-spacing: 6px;
+    color: white;
+    size: 70px;
+}
+
+header h2{
+    font-size: calc(1rem + 4vw);
+    margin: 18px;
+    text-align: center;
+}
+
+.scroll-wrapper{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 3.5vw;
+    color: rgb(217, 217, 217);
+    font-size: calc(0.8rem + 0.5rem);
+}
+
+.about{
+    margin: 100px 0 250px;
+}
+
+.img1{
+    background: url(../assets/img/bill-gates-1.jpg) top/cover;
+}
+
+.h2-wrapper{
+    mix-blend-mode: exclusion;
+    margin: -220px 0 200px;
+    text-align: center;
+}
+
+.about p{
+    width: 70%;
+    min-width: 280px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: calc(7px + 4.5vw);
+    font-size: calc(1rem + 1vw);
+    letter-spacing: 1px;
+}
+
+.formation{
+    margin: 100px 0 250px;
+}
+
+.formation h2{
+    margin-bottom: 100px;
+}
+
+.formation .wrapper{
+    margin: 50px 0;
+}
+
+.formation .appear{
+    text-align: center;
+}
+
+.formation .date p{
+    font-size: calc(0.5rem + 0.5vw);
+    margin-top: 20px;
+}
+
+.formation .text p{
+    font-size: calc(1rem + 1vw);
+    margin: 20px;
+}
+
+.formation p{
+    font-size: calc(1rem + 4vw);
+    font-family: font-bold, serif;
+    letter-spacing: 4px;
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 0 12px 12px;
+}
+
+.experience{
+    margin: 100px 0 250px;
+}
+
+.experience h2{
+    margin-bottom: 100px;
+}
+
+.experience .wrapper{
+    margin: 50px 0;
+}
+
+.experience .appear{
+    text-align: center;
+}
+
+.experience .date p{
+    font-size: calc(0.5rem + 0.5vw);
+    margin: 20px;
+}
+
+.experience .text p{
+    font-size: calc(1rem + 1vw);
+}
+
+.experience p{
+    font-size: calc(1rem + 6vw);
+    font-family: font-bold, serif;
+    letter-spacing: 4px;
+    background: black;
+    color: white;
+    display: inline-block;
+    padding: 0 12px 12px;
+}
+
+.contact{
+    margin: 100px 0;
+}
+
+.all-contact{
+    margin-top: 100px;
+}
+
+.project{
+    position: relative;
+    width: 60vw;
+    max-width: 600px;
+    margin: 50px 50px;
+}
+
+#p1{
+    margin: 0 auto 0 12vw;
+    width: 30%;
+}
+
+#p2{
+    margin: 0 12vw 0 auto;
+    width: 30%;
+}
+
+.project img{
+    transition: 0.4s ease-out;
+    width: 100%;
+}
+
+.project:hover img{
+    filter: brightness(35%);
+}
+
+.project:hover .contact-infos{
+    opacity: 1;
+    transform: translate(0, -50%);
+
+}
+
+.contact-infos{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 8vw;
+    transition: 0.4s ease-out;
+    opacity: 0;
+}
+
+.contact-infos a{
+    font-size: calc(1rem + 0.8vw);
+    text-align: center;
+}
