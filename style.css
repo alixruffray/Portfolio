@@ -247,6 +247,8 @@ header h2{
 
 .all-contact{
     margin-top: 100px;
+    display: block;
+    justify-content: space-between;
 }
 
 .project{
